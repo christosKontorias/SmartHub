@@ -44,6 +44,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textHeaderWelcome">
 
             <EditText
+                android:id="@+id/searchEditText"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
                 android:layout_weight="1"
@@ -74,6 +75,7 @@
         android:overScrollMode="never"
         android:scrollbars="none"
         android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
 
@@ -81,8 +83,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!--Option 1 Map-->
             <LinearLayout
-                android:id="@+id/layoutOption1"
+                android:id="@+id/linearLayoutMap"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -91,7 +94,7 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintEnd_toStartOf="@+id/layoutOption2"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayoutNotes"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
                 
@@ -104,6 +107,7 @@
                     android:src="@drawable/map_icon_64"/>
 
                 <TextView
+                    android:id="@+id/textViewMap"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -113,8 +117,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
+            <!--Option 2 Notes-->
             <LinearLayout
-                android:id="@+id/layoutOption2"
+                android:id="@+id/linearLayoutNotes"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -123,7 +128,7 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintStart_toEndOf="@+id/layoutOption1"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutMap"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -136,6 +141,7 @@
                     android:src="@drawable/notes_icon_64"/>
 
                 <TextView
+                    android:id="@+id/textViewNotes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -145,8 +151,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
+            <!--Option 3 Clock-->
             <LinearLayout
-                android:id="@+id/layoutOption3"
+                android:id="@+id/linearLayoutClock"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -155,9 +162,9 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintEnd_toStartOf="@+id/layoutOption2"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayoutNotes"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutOption1">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutMap">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -168,6 +175,7 @@
                     android:src="@drawable/clock_icon_64"/>
 
                 <TextView
+                    android:id="@+id/textViewClock"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -177,8 +185,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
+            <!--Option 4 Calculator-->
             <LinearLayout
-                android:id="@+id/layoutOption4"
+                android:id="@+id/linearLayoutCalculator"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -187,9 +196,9 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintStart_toEndOf="@+id/layoutOption1"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutClock"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutOption2">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutNotes">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -200,6 +209,7 @@
                     android:src="@drawable/calculator_icon_64"/>
 
                 <TextView
+                    android:id="@+id/textViewCalculator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -209,8 +219,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
+            <!--Option 5 Weather-->
             <LinearLayout
-                android:id="@+id/layoutOption5"
+                android:id="@+id/linearLayoutWeather"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -219,9 +230,9 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintEnd_toStartOf="@+id/layoutOption2"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayoutCalculator"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutOption3">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutClock">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -232,6 +243,7 @@
                     android:src="@drawable/weather_icon_64"/>
 
                 <TextView
+                    android:id="@+id/textViewWeather"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -241,8 +253,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
+            <!--Option 6 Translator-->
             <LinearLayout
-                android:id="@+id/layoutOption6"
+                android:id="@+id/linearLayoutTranslator"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -251,9 +264,9 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintStart_toEndOf="@+id/layoutOption1"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutWeather"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutOption4">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCalculator">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -264,6 +277,7 @@
                     android:src="@drawable/translator_icon_64"/>
 
                 <TextView
+                    android:id="@+id/textViewTranslator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -273,8 +287,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
+            <!--Option 7 FX Converter-->
             <LinearLayout
-                android:id="@+id/layoutOption7"
+                android:id="@+id/linearLayoutFXConverter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -283,9 +298,9 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintEnd_toStartOf="@+id/layoutOption2"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayoutTranslator"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutOption5">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutWeather">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -296,6 +311,7 @@
                     android:src="@drawable/currency_icon_64"/>
 
                 <TextView
+                    android:id="@+id/textViewFXConverter"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -305,8 +321,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
+            <!--Option 8 Compass-->
             <LinearLayout
-                android:id="@+id/layoutOption8"
+                android:id="@+id/linearLayoutCompass"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -315,9 +332,9 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintStart_toEndOf="@+id/layoutOption1"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutFXConverter"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/layoutOption6">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTranslator">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -328,6 +345,7 @@
                     android:src="@drawable/compass_icon_64"/>
 
                 <TextView
+                    android:id="@+id/textViewCompass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -338,19 +356,20 @@
             </LinearLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutNews"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
                 android:background="@drawable/news_background"
                 android:padding="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/layoutOption4"
-                app:layout_constraintStart_toStartOf="@id/layoutOption3"
-                app:layout_constraintTop_toBottomOf="@+id/layoutOption7">
+                app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompass"
+                app:layout_constraintStart_toStartOf="@id/linearLayoutFXConverter"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutFXConverter">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textNews"
+                    android:id="@+id/textNewsPost"
                     android:background="@drawable/neutral_rectangle_background"
                     android:paddingStart="8dp"
                     android:paddingTop="2dp"
@@ -363,13 +382,15 @@
                     app:layout_constraintTop_toTopOf="parent"/>
 
                 <ImageView
+                    android:id="@+id/imageNewsPost"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:contentDescription="@string/app_name"
+                    android:clickable="true"
                     android:src="@drawable/outline_heart_icon_24"
-                    app:layout_constraintBottom_toBottomOf="@+id/textNews"
+                    app:layout_constraintBottom_toBottomOf="@+id/textNewsPost"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textNews"/>
+                    app:layout_constraintTop_toTopOf="@+id/textNewsPost"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -380,8 +401,10 @@
                     android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    app:layout_constraintTop_toBottomOf="@id/textNews"/>
+                    app:layout_constraintTop_toBottomOf="@id/textNewsPost"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutCompass;
+    LinearLayout linearLayoutCompass, linearLayoutClock;
     ImageView likeImageView;
     boolean isLiked = false;
 
@@ -21,8 +21,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         linearLayoutCompass = findViewById(R.id.linearLayoutCompass);
+        linearLayoutClock = findViewById(R.id.linearLayoutClock);
         likeImageView = findViewById(R.id.imageNewsPost);
 
+
+        //Opens Clock Activity
+        linearLayoutClock.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                startActivity(new Intent(MainActivity.this, ClockActivity.class));
+            }
+        });
 
         //Opens Compass Activity
         linearLayoutCompass.setOnClickListener(new View.OnClickListener(){

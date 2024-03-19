@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutCompass, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
+    LinearLayout linearLayoutCompass, linearLayoutCalculator, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
     ImageView likeImageView;
     boolean isLiked = false;
 
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         linearLayoutCompass = findViewById(R.id.linearLayoutCompass);
+        linearLayoutCalculator = findViewById(R.id.linearLayoutCalculator);
         linearLayoutCalendar = findViewById(R.id.linearLayoutCalendar);
         linearLayoutClock = findViewById(R.id.linearLayoutClock);
         linearLayoutUnitsConverter = findViewById(R.id.linearLayoutUnitsConverter);
@@ -33,6 +34,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Open new activity
                 startActivity(new Intent(MainActivity.this, CalendarActivity.class));
+            }
+        });
+
+        //Opens Calculator Activity
+        linearLayoutCalculator.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                startActivity(new Intent(MainActivity.this, CalculatorActivity.class));
             }
         });
 

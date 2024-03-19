@@ -355,6 +355,74 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
+            <!--Option 9 Calendar-->
+            <LinearLayout
+                android:id="@+id/linearLayoutCalendar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/neutral_rectangle_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="M,1:1"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayoutCompass"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutFXConverter">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/calendar_icon_64"/>
+
+                <TextView
+                    android:id="@+id/textViewCalendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Calendar"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <!--Option 10 UnitsConverter-->
+            <LinearLayout
+                android:id="@+id/linearLayoutUnitsConverter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/neutral_rectangle_background"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="M,1:1"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutCalendar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompass">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/tape_measure_icon_64"/>
+
+                <TextView
+                    android:id="@+id/textViewUnitsConverter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Units Converter"
+                    android:textColor="@color/orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayoutNews"
                 android:layout_width="0dp"
@@ -362,9 +430,9 @@
                 android:layout_marginTop="22dp"
                 android:background="@drawable/news_background"
                 android:padding="20dp"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompass"
-                app:layout_constraintStart_toStartOf="@id/linearLayoutFXConverter"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutFXConverter">
+                app:layout_constraintEnd_toEndOf="@+id/linearLayoutUnitsConverter"
+                app:layout_constraintStart_toStartOf="@id/linearLayoutCalendar"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutCalendar">
 
                 <TextView
                     android:layout_width="wrap_content"

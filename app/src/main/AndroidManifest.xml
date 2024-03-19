@@ -13,6 +13,9 @@
         android:theme="@style/Theme.SmartHub"
         tools:targetApi="31">
         <activity
+            android:name=".UnitsConverterActivity"
+            android:exported="false" />
+        <activity
             android:name=".ClockActivity"
             android:exported="false" />
         <activity

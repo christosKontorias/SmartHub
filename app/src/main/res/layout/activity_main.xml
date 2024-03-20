@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/complementaryColor"
@@ -75,6 +74,7 @@
         android:overScrollMode="never"
         android:scrollbars="none"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
         android:paddingBottom="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
@@ -428,16 +428,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
+                android:layout_marginBottom="24dp"
                 android:background="@drawable/news_background"
                 android:padding="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/linearLayoutUnitsConverter"
                 app:layout_constraintStart_toStartOf="@id/linearLayoutCalendar"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutCalendar">
 
                 <TextView
+                    android:id="@+id/textNewsPost"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textNewsPost"
                     android:background="@drawable/neutral_rectangle_background"
                     android:paddingStart="8dp"
                     android:paddingTop="2dp"
@@ -447,18 +449,18 @@
                     android:textColor="@color/orange"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <ImageView
                     android:id="@+id/imageNewsPost"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:contentDescription="@string/app_name"
                     android:clickable="true"
+                    android:contentDescription="@string/app_name"
                     android:src="@drawable/outline_heart_icon_24"
                     app:layout_constraintBottom_toBottomOf="@+id/textNewsPost"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textNewsPost"/>
+                    app:layout_constraintTop_toTopOf="@+id/textNewsPost" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -469,10 +471,20 @@
                     android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    app:layout_constraintTop_toBottomOf="@id/textNewsPost"/>
+                    app:layout_constraintTop_toBottomOf="@id/textNewsPost" />
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bottom_nav_menu_background"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemPaddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

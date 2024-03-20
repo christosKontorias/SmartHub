@@ -47,4 +47,7 @@ dependencies {
 
     //Calculator
     implementation("org.mariuszgromada.math:MathParser.org-mXparser:4.4.2")
+
+    //FX Converter
+    implementation("com.android.volley:volley:1.2.1")
 }

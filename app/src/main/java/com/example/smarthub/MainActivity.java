@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutCompass, linearLayoutCalculator, linearLayoutNotes, linearLayoutFXConverter, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
+    LinearLayout linearLayoutBMICalculator, linearLayoutCompass, linearLayoutCalculator, linearLayoutNotes, linearLayoutFXConverter, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
     ImageView likeImageView;
     boolean isLiked = false;
 
@@ -23,12 +23,22 @@ public class MainActivity extends AppCompatActivity {
         linearLayoutCompass = findViewById(R.id.linearLayoutCompass);
         linearLayoutCalculator = findViewById(R.id.linearLayoutCalculator);
         linearLayoutCalendar = findViewById(R.id.linearLayoutCalendar);
+        linearLayoutBMICalculator = findViewById(R.id.linearLayoutBMICalculator);
         linearLayoutClock = findViewById(R.id.linearLayoutClock);
         linearLayoutNotes = findViewById(R.id.linearLayoutNotes);
         linearLayoutFXConverter = findViewById(R.id.linearLayoutFXConverter);
         linearLayoutUnitsConverter = findViewById(R.id.linearLayoutUnitsConverter);
         likeImageView = findViewById(R.id.imageNewsPost);
 
+
+        //Opens BMI Calculator Activity
+        linearLayoutBMICalculator.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                startActivity(new Intent(MainActivity.this, BMICalculatorActivity.class));
+            }
+        });
 
         //Opens Notes Activity
         linearLayoutNotes.setOnClickListener(new View.OnClickListener(){

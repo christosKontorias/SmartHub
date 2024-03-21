@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/orange"
+    android:background="#A8CD9F"
     android:gravity="center"
     tools:context=".QRScannerActivity">
 
@@ -25,7 +25,7 @@
         android:layout_below="@+id/scanner_view"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
-        android:text="Start Scanning....."
+        android:text="@string/start_scanning"
         android:textColor="@color/black"/>
 
 </RelativeLayout>

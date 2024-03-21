@@ -116,7 +116,7 @@ class CalculatorActivity : AppCompatActivity() {
                 binding.output.setTextColor(ContextCompat.getColor(this, R.color.red))
             }else{
                 binding.output.text = DecimalFormat("0.######").format(result).toString()
-                binding.output.setTextColor(ContextCompat.getColor(this, R.color.green))
+                binding.output.setTextColor(ContextCompat.getColor(this, R.color.orange))
             }
         }catch (e: Exception){
             binding.output.text = "Error"

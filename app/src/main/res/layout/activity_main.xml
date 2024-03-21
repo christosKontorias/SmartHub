@@ -16,32 +16,34 @@
         android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textHeaderWelcome"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="15dp"
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/smarthub_logo_main"
             android:textAlignment="center"
-            android:text="Welcome To SmartHub"
             android:textColor="@color/black"
             android:textSize="25sp"
             android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/smartHubLogo" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="15dp"
-            android:layout_marginEnd="15dp"
+            android:layout_marginEnd="30dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/neutral_rectangle_background"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textHeaderWelcome">
+            app:layout_constraintTop_toBottomOf="@+id/imageViewLogo">
 
             <EditText
                 android:id="@+id/searchEditText"
@@ -51,7 +53,7 @@
                 android:background="@null"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
-                android:hint="Search..."
+                android:hint="@string/search"
                 android:textColorHint="@color/black"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
@@ -63,7 +65,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/search_icon_background"
-                android:contentDescription="@string/app_name"
+                android:contentDescription="@string/search"
                 android:padding="6dp"
                 android:src="@drawable/search_icon_24"/>
         </LinearLayout>
@@ -89,7 +91,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -102,7 +104,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/bmi_calculator"
                     android:padding="8dp"
                     android:src="@drawable/bmi_calculator_icon_64"/>
 
@@ -111,8 +113,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="BMI Calculator"
-                    android:textColor="@color/orange"
+                    android:text="@string/bmi_calculator"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -123,7 +125,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -136,7 +138,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/notes"
                     android:padding="8dp"
                     android:src="@drawable/notes_icon_64"/>
 
@@ -145,8 +147,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="NOTES"
-                    android:textColor="@color/orange"
+                    android:text="@string/notes"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -157,7 +159,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -170,7 +172,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/clock"
                     android:padding="8dp"
                     android:src="@drawable/clock_icon_64"/>
 
@@ -179,8 +181,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="CLOCK"
-                    android:textColor="@color/orange"
+                    android:text="@string/clock"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -191,7 +193,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -204,7 +206,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/calculator"
                     android:padding="8dp"
                     android:src="@drawable/calculator_icon_64"/>
 
@@ -213,8 +215,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="CALCULATOR"
-                    android:textColor="@color/orange"
+                    android:text="@string/calculator"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -225,7 +227,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -238,7 +240,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/flashlight"
                     android:padding="8dp"
                     android:src="@drawable/flashlight_icon_64"/>
 
@@ -247,8 +249,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="FLASHLIGHT"
-                    android:textColor="@color/orange"
+                    android:text="@string/flashlight"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -259,7 +261,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -272,7 +274,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/qr_scanner"
                     android:padding="8dp"
                     android:src="@drawable/qr_scanner_icon_64"/>
 
@@ -281,8 +283,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="QR Scanner"
-                    android:textColor="@color/orange"
+                    android:text="@string/qr_scanner"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -293,7 +295,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -306,7 +308,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/fx_converter"
                     android:padding="8dp"
                     android:src="@drawable/currency_icon_64"/>
 
@@ -315,8 +317,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="FX Converter"
-                    android:textColor="@color/orange"
+                    android:text="@string/fx_converter"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -327,7 +329,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -340,7 +342,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/compass"
                     android:padding="8dp"
                     android:src="@drawable/compass_icon_64"/>
 
@@ -349,8 +351,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="COMPASS"
-                    android:textColor="@color/orange"
+                    android:text="@string/compass"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -361,7 +363,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -374,7 +376,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/calendar"
                     android:padding="8dp"
                     android:src="@drawable/calendar_icon_64"/>
 
@@ -383,8 +385,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Calendar"
-                    android:textColor="@color/orange"
+                    android:text="@string/calendar"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -395,7 +397,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
-                android:background="@drawable/neutral_rectangle_background"
+                android:background="@drawable/apps_rectangle_background"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="15dp"
@@ -408,7 +410,7 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/units_converter"
                     android:padding="8dp"
                     android:src="@drawable/tape_measure_icon_64"/>
 
@@ -417,8 +419,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Units Converter"
-                    android:textColor="@color/orange"
+                    android:text="@string/units_converter"
+                    android:textColor="@color/black"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
             </LinearLayout>
@@ -444,7 +446,7 @@
                     android:paddingTop="2dp"
                     android:paddingEnd="8dp"
                     android:paddingBottom="2dp"
-                    android:text="NEWS"
+                    android:text="@string/news"
                     android:textColor="@color/orange"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -455,7 +457,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:clickable="true"
-                    android:contentDescription="@string/app_name"
+                    android:contentDescription="@string/image_reaction"
                     android:src="@drawable/outline_heart_icon_24"
                     app:layout_constraintBottom_toBottomOf="@+id/textNewsPost"
                     app:layout_constraintStart_toStartOf="parent"
@@ -467,7 +469,7 @@
                     android:layout_marginTop="20dp"
                     android:ellipsize="end"
                     android:maxLines="3"
-                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                    android:text="@string/lorem_ipsum"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     app:layout_constraintTop_toBottomOf="@id/textNewsPost" />

@@ -5,12 +5,12 @@
     <color name="orange">#FFA500</color>
 
 
-    <color name="primaryColor">#008080</color>
+    <color name="primaryColor">#496989</color>
     <color name="secondaryColor">#FF6F61</color>
     <color name="accentColo">#FFD700</color>
     <color name="neutralColor">#E0E0E0</color>
     <color name="highlightColor">#00FFFF</color>
-    <color name="complementaryColor">#98FF98</color>
+    <color name="complementaryColor">#58A399</color>
 
     <!--Calculator-->
     <color name="window_background">#111111</color>

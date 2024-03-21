@@ -5,8 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ClockActivity"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#A8CD9F"
+    tools:context=".ClockActivity">
 
     <TextView
         android:id="@+id/analogText"
@@ -14,13 +15,14 @@
         android:layout_height="wrap_content"
         android:textSize="40sp"
         android:layout_centerHorizontal="true"
-        android:text="Analog Clock"
-        android:layout_marginTop="20dp"/>
+        android:text="@string/analog_clock"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"/>
 
     <AnalogClock
         android:id="@+id/analogClock"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_below="@id/analogText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"/>
@@ -29,11 +31,12 @@
         android:id="@+id/digitalText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Digital Clock"
+        android:text="@string/digital_clock"
         android:layout_below="@id/analogClock"
         android:layout_centerHorizontal="true"
         android:textSize="40sp"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"/>
 
     <DigitalClock
         android:id="@+id/digitalClock"
@@ -42,5 +45,6 @@
         android:textSize="20sp"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/digitalText"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"/>
 </RelativeLayout>

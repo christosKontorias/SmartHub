@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutBMICalculator, linearLayoutCompass, linearLayoutCalculator, linearLayoutNotes, linearLayoutFXConverter, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
+    LinearLayout linearLayoutBMICalculator, linearLayoutCompass, linearLayoutFlashlight, linearLayoutCalculator, linearLayoutNotes, linearLayoutFXConverter, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
     ImageView likeImageView;
     boolean isLiked = false;
 
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         linearLayoutCompass = findViewById(R.id.linearLayoutCompass);
         linearLayoutCalculator = findViewById(R.id.linearLayoutCalculator);
+        linearLayoutFlashlight = findViewById(R.id.linearLayoutFlashlight);
         linearLayoutCalendar = findViewById(R.id.linearLayoutCalendar);
         linearLayoutBMICalculator = findViewById(R.id.linearLayoutBMICalculator);
         linearLayoutClock = findViewById(R.id.linearLayoutClock);
@@ -37,6 +38,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Open new activity
                 startActivity(new Intent(MainActivity.this, BMICalculatorActivity.class));
+            }
+        });
+
+        //Opens Flashlight Activity
+        linearLayoutFlashlight.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                startActivity(new Intent(MainActivity.this, FlashlightActivity.class));
             }
         });
 

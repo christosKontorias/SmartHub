@@ -219,9 +219,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
-            <!--Option 5 Weather-->
+            <!--Option 5 Flashlight-->
             <LinearLayout
-                android:id="@+id/linearLayoutWeather"
+                android:id="@+id/linearLayoutFlashlight"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -240,14 +240,14 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/weather_icon_64"/>
+                    android:src="@drawable/flashlight_icon_64"/>
 
                 <TextView
-                    android:id="@+id/textViewWeather"
+                    android:id="@+id/textViewFlashlight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="WEATHER"
+                    android:text="FLASHLIGHT"
                     android:textColor="@color/orange"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -264,7 +264,7 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintStart_toEndOf="@+id/linearLayoutWeather"
+                app:layout_constraintStart_toEndOf="@+id/linearLayoutFlashlight"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutCalculator">
 
@@ -300,7 +300,7 @@
                 app:layout_constraintDimensionRatio="M,1:1"
                 app:layout_constraintEnd_toStartOf="@+id/linearLayoutTranslator"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutWeather">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutFlashlight">
 
                 <ImageView
                     android:layout_width="100dp"

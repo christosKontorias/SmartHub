@@ -8,6 +8,9 @@ material = "1.11.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
 kotlin = "1.9.0"
+mathParser = "4.4.2"
+codeScanner = "2.3.0"
+volley = "1.2.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -17,6 +20,10 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+mathParser = { group = "org.mariuszgromada.math", name = "MathParser.org-mXparser", version.ref = "mathParser" }
+codeScanner = { group = "com.github.yuriy-budiyev", name = "code-scanner", version.ref = "codeScanner" }
+volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
+
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

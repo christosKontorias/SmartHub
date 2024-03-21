@@ -42,18 +42,6 @@ class QRScannerActivity : AppCompatActivity() {
             scanMode = ScanMode.CONTINUOUS
             isAutoFocusEnabled = true
             isFlashEnabled = false
-/*
-            decodeCallback = DecodeCallback {
-                runOnUiThread{
-                    val scannedContent = it.text
-                    if (isValidUrl(scannedContent)){
-                        openUrlInBrowser(scannedContent)
-                    }else{
-                        binding.txTextView.text = it.text
-                    }
-                }
-            }
-*/
 
             decodeCallback = DecodeCallback {
                 runOnUiThread {

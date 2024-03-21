@@ -9,12 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class UnitsConverterActivity extends AppCompatActivity {
 
@@ -27,7 +22,7 @@ public class UnitsConverterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_units_converter);
 
-        inputNumber = findViewById(R.id.inputNumber);
+        EditText inputNumber = findViewById(R.id.inputNumber);
         units = findViewById(R.id.units);
         km = findViewById(R.id.km);
         m = findViewById(R.id.m);
@@ -57,14 +52,10 @@ public class UnitsConverterActivity extends AppCompatActivity {
 
         inputNumber.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
 
             @Override
             public void afterTextChanged(Editable s) {
@@ -113,9 +104,7 @@ public class UnitsConverterActivity extends AppCompatActivity {
                 default:
                     return;
             }
-
             setKm(inputInKm);
-
         }
     }
 

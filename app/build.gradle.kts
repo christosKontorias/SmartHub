@@ -44,13 +44,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation(libs.mathParser) //Calculator
+    implementation(libs.codeScanner) //QR Scanner
+    implementation(libs.volley) //FX Converter
 
-    //Calculator
-    implementation("org.mariuszgromada.math:MathParser.org-mXparser:4.4.2")
-
-    //QR Scanner
-    implementation("com.github.yuriy-budiyev:code-scanner:2.3.0")
-
-    //FX Converter
-    implementation("com.android.volley:volley:1.2.1")
 }

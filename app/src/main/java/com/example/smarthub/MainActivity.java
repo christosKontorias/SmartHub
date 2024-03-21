@@ -7,12 +7,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
-
-
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutBMICalculator, linearLayoutQRScanner, linearLayoutCompass, linearLayoutFlashlight, linearLayoutCalculator, linearLayoutNotes, linearLayoutFXConverter, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
-    ImageView likeImageView;
     boolean isLiked = false;
 
     @Override
@@ -20,18 +16,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        linearLayoutCompass = findViewById(R.id.linearLayoutCompass);
-        linearLayoutQRScanner = findViewById(R.id.linearLayoutQRScanner);
-        linearLayoutCalculator = findViewById(R.id.linearLayoutCalculator);
-        linearLayoutFlashlight = findViewById(R.id.linearLayoutFlashlight);
-        linearLayoutCalendar = findViewById(R.id.linearLayoutCalendar);
-        linearLayoutBMICalculator = findViewById(R.id.linearLayoutBMICalculator);
-        linearLayoutClock = findViewById(R.id.linearLayoutClock);
-        linearLayoutNotes = findViewById(R.id.linearLayoutNotes);
-        linearLayoutFXConverter = findViewById(R.id.linearLayoutFXConverter);
-        linearLayoutUnitsConverter = findViewById(R.id.linearLayoutUnitsConverter);
-        likeImageView = findViewById(R.id.imageNewsPost);
-
+        LinearLayout linearLayoutCompass = findViewById(R.id.linearLayoutCompass);
+        LinearLayout linearLayoutQRScanner = findViewById(R.id.linearLayoutQRScanner);
+        LinearLayout linearLayoutCalculator = findViewById(R.id.linearLayoutCalculator);
+        LinearLayout linearLayoutFlashlight = findViewById(R.id.linearLayoutFlashlight);
+        LinearLayout linearLayoutCalendar = findViewById(R.id.linearLayoutCalendar);
+        LinearLayout linearLayoutBMICalculator = findViewById(R.id.linearLayoutBMICalculator);
+        LinearLayout linearLayoutClock = findViewById(R.id.linearLayoutClock);
+        LinearLayout linearLayoutNotes = findViewById(R.id.linearLayoutNotes);
+        LinearLayout linearLayoutFXConverter = findViewById(R.id.linearLayoutFXConverter);
+        LinearLayout linearLayoutUnitsConverter = findViewById(R.id.linearLayoutUnitsConverter);
+        ImageView likeImageView = findViewById(R.id.imageNewsPost);
 
         //Opens BMI Calculator Activity
         linearLayoutBMICalculator.setOnClickListener(new View.OnClickListener(){
@@ -39,24 +34,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Open new activity
                 startActivity(new Intent(MainActivity.this, BMICalculatorActivity.class));
-            }
-        });
-
-        //Opens QR Scanner Activity
-        linearLayoutQRScanner.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                // Open new activity
-                startActivity(new Intent(MainActivity.this, QRScannerActivity.class));
-            }
-        });
-
-        //Opens Flashlight Activity
-        linearLayoutFlashlight.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                // Open new activity
-                startActivity(new Intent(MainActivity.this, FlashlightActivity.class));
             }
         });
 
@@ -69,21 +46,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Opens FX Converter Activity
-        linearLayoutFXConverter.setOnClickListener(new View.OnClickListener(){
+        //Opens Clock Activity
+        linearLayoutClock.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // Open new activity
-                startActivity(new Intent(MainActivity.this, FXConverterActivity.class));
-            }
-        });
-
-        //Opens Calendar Activity
-        linearLayoutCalendar.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                // Open new activity
-                startActivity(new Intent(MainActivity.this, CalendarActivity.class));
+                startActivity(new Intent(MainActivity.this, ClockActivity.class));
             }
         });
 
@@ -96,21 +64,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Opens Clock Activity
-        linearLayoutClock.setOnClickListener(new View.OnClickListener(){
+        //Opens Flashlight Activity
+        linearLayoutFlashlight.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // Open new activity
-                startActivity(new Intent(MainActivity.this, ClockActivity.class));
+                startActivity(new Intent(MainActivity.this, FlashlightActivity.class));
             }
         });
 
-        //Opens Units Converter Activity
-        linearLayoutUnitsConverter.setOnClickListener(new View.OnClickListener(){
+        //Opens QR Scanner Activity
+        linearLayoutQRScanner.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 // Open new activity
-                startActivity(new Intent(MainActivity.this, UnitsConverterActivity.class));
+                startActivity(new Intent(MainActivity.this, QRScannerActivity.class));
+            }
+        });
+
+        //Opens FX Converter Activity
+        linearLayoutFXConverter.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                startActivity(new Intent(MainActivity.this, FXConverterActivity.class));
             }
         });
 
@@ -123,6 +100,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Opens Calendar Activity
+        linearLayoutCalendar.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                startActivity(new Intent(MainActivity.this, CalendarActivity.class));
+            }
+        });
+
+        //Opens Units Converter Activity
+        linearLayoutUnitsConverter.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                startActivity(new Intent(MainActivity.this, UnitsConverterActivity.class));
+            }
+        });
+
         // Set OnClickListener to the ImageView
         likeImageView.setOnClickListener(view -> {
             // Toggle between the outline and filled heart images
@@ -131,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
             } else {
                 likeImageView.setImageResource(R.drawable.filled_heart_icon_24);
             }
-            isLiked = !isLiked; // Invert the liked status
+            isLiked = !isLiked;
         });
     }
 }

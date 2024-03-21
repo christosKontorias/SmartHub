@@ -13,7 +13,6 @@ import android.content.DialogInterface;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class NotesActivity extends AppCompatActivity {
 
     private static final String PREFS_NAME = "NotePrefs";
@@ -99,7 +98,6 @@ public class NotesActivity extends AppCompatActivity {
 
         titleTextView.setText(note.getTitle());
         contentTextView.setText(note.getContent());
-
         noteView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
@@ -107,7 +105,6 @@ public class NotesActivity extends AppCompatActivity {
                 return true;
             }
         });
-
         notesContainer.addView(noteView);
     }
 

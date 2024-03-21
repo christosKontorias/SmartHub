@@ -5,11 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.smarthub.databinding.ActivityBmicalculatorBinding
 import kotlin.math.pow
 
-
 class BMICalculatorActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityBmicalculatorBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityBmicalculatorBinding.inflate(layoutInflater)
@@ -19,7 +16,6 @@ class BMICalculatorActivity : AppCompatActivity() {
             calculateBMI()
         }
     }
-
     private fun calculateBMI(){
         val weight = binding.weightEdit.text.toString().toFloatOrNull()
         val height = binding.heightEdit.text.toString().toFloatOrNull()

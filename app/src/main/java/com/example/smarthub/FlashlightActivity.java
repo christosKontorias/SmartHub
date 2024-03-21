@@ -1,14 +1,12 @@
 package com.example.smarthub;
 
 import android.content.pm.PackageManager;
-import android.hardware.Camera;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.SeekBar;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 

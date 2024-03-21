@@ -1,7 +1,6 @@
 package com.example.smarthub;
 
 import android.app.Dialog;
-import android.app.DownloadManager;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -12,29 +11,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 
 public class FXConverterActivity extends AppCompatActivity {
-
     TextView convertFromDropdownTextView, convertToDropdownTextView, conversionRateText;
     EditText amountToConvert;
     ArrayList<String> arrayList;
@@ -76,19 +66,13 @@ public class FXConverterActivity extends AppCompatActivity {
 
                 editText.addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
                         adapter.getFilter().filter(s);
                     }
-
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -118,19 +102,13 @@ public class FXConverterActivity extends AppCompatActivity {
 
                 editText.addTextChangedListener(new TextWatcher() {
                     @Override
-                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    }
-
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
                     @Override
                     public void onTextChanged(CharSequence s, int start, int before, int count) {
                         adapter.getFilter().filter(s);
                     }
-
                     @Override
-                    public void afterTextChanged(Editable s) {
-
-                    }
+                    public void afterTextChanged(Editable s) {}
                 });
 
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -150,9 +128,7 @@ public class FXConverterActivity extends AppCompatActivity {
                 try {
                     Double amountToConvert = Double.valueOf(FXConverterActivity.this.amountToConvert.getText().toString());
                     getConversionRate(convertFromValue, convertToValue, amountToConvert);
-                }catch (Exception e){
-
-                }
+                }catch (Exception e){}
             }
         });
     }
@@ -174,9 +150,7 @@ public class FXConverterActivity extends AppCompatActivity {
             }
             },new Response.ErrorListener(){
                 @Override
-                public void onErrorResponse(VolleyError error){
-
-                }
+                public void onErrorResponse(VolleyError error){}
         });
         queue.add(stringRequest);
         return null;

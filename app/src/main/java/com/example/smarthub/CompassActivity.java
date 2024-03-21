@@ -8,14 +8,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.List;
 
 
 public class CompassActivity extends AppCompatActivity implements SensorEventListener {
-
     ImageView imageViewCompass;
     TextView textViewDegrees;
     SensorManager sensorManager;
@@ -27,7 +24,6 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         imageViewCompass = findViewById(R.id.imageViewCompass);
         textViewDegrees = findViewById(R.id.textViewDegrees);
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-
     }
 
     @Override
@@ -45,16 +41,12 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         super.onPause();
         sensorManager.unregisterListener(this);
     }
-
     @Override
     public void onSensorChanged(SensorEvent event) {
         int degrees = Math.round(event.values[0]);
         textViewDegrees.setText("Degree's: " + degrees);
         imageViewCompass.setRotation(-degrees);
     }
-
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
-    }
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {}
 }

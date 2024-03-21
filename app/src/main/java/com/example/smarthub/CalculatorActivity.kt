@@ -8,11 +8,8 @@ import org.mariuszgromada.math.mxparser.Expression
 import java.lang.Exception
 import java.text.DecimalFormat
 
-
 class CalculatorActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivityCalculatorBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCalculatorBinding.inflate(layoutInflater)
@@ -95,18 +92,15 @@ class CalculatorActivity : AppCompatActivity() {
             showResult();
         }
     }
-
     private fun addToInputText(buttonValue: String): String {
         return  "${binding.input.text}$buttonValue"
     }
-
     private fun eraseInput() {
         val currentText = binding.input.text.toString()
         if (currentText.isNotEmpty()) {
             binding.input.text = currentText.dropLast(1)
         }
     }
-
     private fun getInputExpression(): String{
         var expression = binding.input.text.replace(Regex("÷"), "/")
         expression = expression.replace(Regex("×"), "*")
@@ -122,7 +116,8 @@ class CalculatorActivity : AppCompatActivity() {
                 binding.output.setTextColor(ContextCompat.getColor(this, R.color.red))
             }else{
                 binding.output.text = DecimalFormat("0.######").format(result).toString()
-                binding.output.setTextColor(ContextCompat.getColor(this, R.color.green))            }
+                binding.output.setTextColor(ContextCompat.getColor(this, R.color.green))
+            }
         }catch (e: Exception){
             binding.output.text = "Error"
             binding.output.setTextColor(ContextCompat.getColor(this, R.color.red))

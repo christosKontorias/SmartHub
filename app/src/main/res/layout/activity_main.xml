@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -253,9 +254,9 @@
                     android:textStyle="bold"/>
             </LinearLayout>
 
-            <!--Option 6 Translator-->
+            <!--Option 6 QRCodeScanner-->
             <LinearLayout
-                android:id="@+id/linearLayoutTranslator"
+                android:id="@+id/linearLayoutQRScanner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="22dp"
@@ -274,14 +275,14 @@
                     android:layout_margin="8dp"
                     android:contentDescription="@string/app_name"
                     android:padding="8dp"
-                    android:src="@drawable/translator_icon_64"/>
+                    android:src="@drawable/qr_scanner_icon_64"/>
 
                 <TextView
                     android:id="@+id/textViewTranslator"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="TRANSALTOR"
+                    android:text="QR Scanner"
                     android:textColor="@color/orange"
                     android:textSize="20sp"
                     android:textStyle="bold"/>
@@ -298,7 +299,7 @@
                 android:orientation="vertical"
                 android:padding="15dp"
                 app:layout_constraintDimensionRatio="M,1:1"
-                app:layout_constraintEnd_toStartOf="@+id/linearLayoutTranslator"
+                app:layout_constraintEnd_toStartOf="@+id/linearLayoutQRScanner"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayoutFlashlight">
 
@@ -334,7 +335,7 @@
                 app:layout_constraintDimensionRatio="M,1:1"
                 app:layout_constraintStart_toEndOf="@+id/linearLayoutFXConverter"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayoutTranslator">
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutQRScanner">
 
                 <ImageView
                     android:layout_width="100dp"

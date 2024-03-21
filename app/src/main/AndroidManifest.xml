@@ -3,7 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
     <!-- FX Converter -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- QR Scanner -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartHub"
         tools:targetApi="31">
+        <activity
+            android:name=".QRScannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true" />
         <activity
             android:name=".FlashlightActivity"
             android:exported="false" />

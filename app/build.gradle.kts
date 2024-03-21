@@ -48,6 +48,9 @@ dependencies {
     //Calculator
     implementation("org.mariuszgromada.math:MathParser.org-mXparser:4.4.2")
 
+    //QR Scanner
+    implementation("com.github.yuriy-budiyev:code-scanner:2.3.0")
+
     //FX Converter
     implementation("com.android.volley:volley:1.2.1")
 }

@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    LinearLayout linearLayoutBMICalculator, linearLayoutCompass, linearLayoutFlashlight, linearLayoutCalculator, linearLayoutNotes, linearLayoutFXConverter, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
+    LinearLayout linearLayoutBMICalculator, linearLayoutQRScanner, linearLayoutCompass, linearLayoutFlashlight, linearLayoutCalculator, linearLayoutNotes, linearLayoutFXConverter, linearLayoutCalendar, linearLayoutClock, linearLayoutUnitsConverter;
     ImageView likeImageView;
     boolean isLiked = false;
 
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         linearLayoutCompass = findViewById(R.id.linearLayoutCompass);
+        linearLayoutQRScanner = findViewById(R.id.linearLayoutQRScanner);
         linearLayoutCalculator = findViewById(R.id.linearLayoutCalculator);
         linearLayoutFlashlight = findViewById(R.id.linearLayoutFlashlight);
         linearLayoutCalendar = findViewById(R.id.linearLayoutCalendar);
@@ -38,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Open new activity
                 startActivity(new Intent(MainActivity.this, BMICalculatorActivity.class));
+            }
+        });
+
+        //Opens QR Scanner Activity
+        linearLayoutQRScanner.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                // Open new activity
+                startActivity(new Intent(MainActivity.this, QRScannerActivity.class));
             }
         });
 

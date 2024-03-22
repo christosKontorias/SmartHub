@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/complementaryColor"
     tools:context=".UnitsConverterActivity">
 
     <LinearLayout
@@ -379,11 +380,6 @@
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:background="@color/black"/>
     </LinearLayout>
 
     <LinearLayout
@@ -410,6 +406,8 @@
                 android:padding="15dp"
                 android:textColor="@color/black"
                 android:textSize="18sp"
+                android:hint="Enter a Number!"
+                android:textColorHint="#A8CD9F"
                 android:inputType="numberDecimal"
                 android:layout_marginEnd="10dp"/>
         

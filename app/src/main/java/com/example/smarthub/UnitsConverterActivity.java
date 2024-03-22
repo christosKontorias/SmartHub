@@ -37,7 +37,7 @@ public class UnitsConverterActivity extends AppCompatActivity {
 
         String[] arr = {"km", "m", "cm", "mm", "microm", "nm", "mile", "yard", "foot", "inch"};
 
-        units.setAdapter(new ArrayAdapter(UnitsConverterActivity.this, android.R.layout.simple_list_item_1, arr));
+        units.setAdapter(new ArrayAdapter(UnitsConverterActivity.this, R.layout.spinner_item, arr));
 
         units.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

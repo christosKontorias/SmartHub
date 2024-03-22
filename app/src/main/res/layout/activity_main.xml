@@ -34,6 +34,7 @@
             android:contentDescription="@string/smartHubLogo" />
 
         <LinearLayout
+            android:id="@+id/googleSearchBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
@@ -53,21 +54,23 @@
                 android:background="@null"
                 android:imeOptions="actionSearch"
                 android:inputType="text"
-                android:hint="@string/search"
+                android:hint="@string/google_search"
                 android:textColorHint="@color/black"
                 android:paddingStart="15dp"
                 android:paddingEnd="15dp"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:importantForAutofill="no"/>
+                android:importantForAutofill="no" />
 
             <ImageView
+                android:id="@+id/searchImageView"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="@drawable/search_icon_background"
                 android:contentDescription="@string/search"
                 android:padding="6dp"
-                android:src="@drawable/search_icon_24"/>
+                android:src="@drawable/search_icon_24"
+                android:onClick="onSearchIconClicked"/>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

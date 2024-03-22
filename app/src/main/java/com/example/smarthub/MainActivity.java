@@ -1,10 +1,22 @@
 package com.example.smarthub;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Rect;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        EditText searchEditText = findViewById(R.id.searchEditText);
+        ImageView searchImageView = findViewById(R.id.searchImageView);
         LinearLayout linearLayoutCompass = findViewById(R.id.linearLayoutCompass);
         LinearLayout linearLayoutQRScanner = findViewById(R.id.linearLayoutQRScanner);
         LinearLayout linearLayoutCalculator = findViewById(R.id.linearLayoutCalculator);
@@ -27,6 +41,20 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout linearLayoutFXConverter = findViewById(R.id.linearLayoutFXConverter);
         LinearLayout linearLayoutUnitsConverter = findViewById(R.id.linearLayoutUnitsConverter);
         ImageView likeImageView = findViewById(R.id.imageNewsPost);
+
+
+        // Google Search Image Navigation
+        searchImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String searchQuery = searchEditText.getText().toString().trim();
+                if (!searchQuery.isEmpty()) {
+                    String searchUrl = "https://www.google.com/search?q=" + Uri.encode(searchQuery);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(searchUrl));
+                    startActivity(intent);
+                }
+            }
+        });
 
         //Opens BMI Calculator Activity
         linearLayoutBMICalculator.setOnClickListener(new View.OnClickListener(){

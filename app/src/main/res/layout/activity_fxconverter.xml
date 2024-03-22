@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A8CD9F"
+    android:background="@color/complementaryColor"
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical"
@@ -13,42 +13,53 @@
 
     <TextView
         android:id="@+id/titleTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/card_view"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
         android:text="@string/currency_converter"
+        android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="25sp"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/imageViewIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/currency_conversion_icon_128"
+        android:contentDescription="@string/currency_converter" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="match_parent"
-        android:layout_height="400dp"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="10dp"
-        android:clickable="true"
-        android:focusable="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        app:cardBackgroundColor="#A8CD9F"
         app:cardCornerRadius="25dp">
 
         <LinearLayout
             android:id="@+id/masterLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:orientation="vertical"
-            android:padding="12dp"
-            android:paddingBottom="10dp">
+            android:padding="12dp">
 
             <LinearLayout
                 android:id="@+id/dropdown_menu_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:orientation="vertical"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
@@ -56,26 +67,28 @@
                 <LinearLayout
                     android:id="@+id/layoutOne"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:id="@+id/convertFromTitle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1.0"
-                        android:text="Convert From"
-                        android:textColor="@color/black"/>
+                        android:layout_weight="1"
+                        android:text="@string/convert_from"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
 
                     <TextView
                         android:id="@+id/convertToTitle"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.0"
-                        android:text="Convert To"
-                        android:textColor="@color/black"/>
+                        android:layout_weight="1"
+                        android:text="@string/convert_to"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -87,67 +100,68 @@
                         android:id="@+id/convert_from_dropdown_menu"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1.0"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
                         android:background="@android:drawable/editbox_background"
                         android:gravity="center_vertical"
-                        android:hint="Select Country"
-                        android:text=""
-                        android:textColor="@color/black"
-                        android:textSize="10sp"
+                        android:hint="@string/select_country"
+                        android:textColorHint="@color/black"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
                         app:drawableEndCompat="@drawable/arrow_drop_down_24"
-                        app:drawableRightCompat="@drawable/arrow_drop_down_24"/>
+                        app:drawableRightCompat="@drawable/arrow_drop_down_24" />
 
                     <TextView
                         android:id="@+id/convert_to_dropdown_menu"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.0"
+                        android:layout_weight="1"
+                        android:layout_marginTop="5dp"
                         android:background="@android:drawable/editbox_background"
-                        android:hint="Select Country"
                         android:gravity="center_vertical"
-                        android:text=""
-                        android:textColor="@color/black"
-                        android:textSize="10sp"
+                        android:hint="@string/select_country"
+                        android:textColorHint="@color/black"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp"
                         app:drawableEndCompat="@drawable/arrow_drop_down_24"
-                        app:drawableRightCompat="@drawable/arrow_drop_down_24"/>
-
+                        app:drawableRightCompat="@drawable/arrow_drop_down_24" />
                 </LinearLayout>
             </LinearLayout>
-            
+
             <LinearLayout
                 android:id="@+id/linearLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:orientation="vertical"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
-                
+
                 <LinearLayout
                     android:id="@+id/linearLayout01"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="top|bottom|center_vertical|fill_vertical|center|fill"
-                    android:orientation="horizontal">
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:id="@+id/amountToConvertValueText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1.0"
-                        android:text="Amount To Convert"
-                        android:textColor="@color/black"/>
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:text="@string/amount_to_convert"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/conversionRateResultText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.0"
+                        android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Conversion Rate"
-                        android:textColor="@color/black"/>
+                        android:textAlignment="center"
+                        android:text="@string/conversion_rate"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -156,49 +170,44 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    
+
                     <EditText
                         android:id="@+id/amountToConvertValueEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_weight="1"
                         android:layout_marginStart="10dp"
-                        android:layout_weight="1.0"
                         android:inputType="number"
                         android:maxLines="1"
                         android:singleLine="true"
-                        android:text=""
+                        android:textColorHint="@color/black"
                         android:textColor="@color/black"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/conversionRateText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.0"
+                        android:layout_weight="1"
                         android:gravity="center"
                         android:textColor="@color/black"
-                        android:textSize="18sp"/>
-                    
+                        android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>
-            
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:paddingTop="20sp">
-                
+                android:layout_marginTop="20dp">
+
                 <Button
                     android:id="@+id/conversionButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:paddingTop="7dp"
-                    android:paddingBottom="7dp"
-                    android:text="Convert"
-                    android:textColor="@color/black"/>
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/convert"
+                    android:textColor="@android:color/black" />
             </RelativeLayout>
-            
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>

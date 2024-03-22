@@ -60,5 +60,16 @@
     <string name="thursday">THUR</string>
     <string name="friday">FRI</string>
     <string name="saturday">SAT</string>
+    <string name="kilometre">Kilometre</string>
+    <string name="meter">Meter</string>
+    <string name="centimeter">Centimeter</string>
+    <string name="millimetre">Millimetre</string>
+    <string name="micrometre">Micrometre</string>
+    <string name="nanometre">Nanometre</string>
+    <string name="mile">Mile</string>
+    <string name="yard">Yard</string>
+    <string name="foot">Foot</string>
+    <string name="inch">Inch</string>
+    <string name="enter_a_number">Enter a Number!</string>
 
 </resources>

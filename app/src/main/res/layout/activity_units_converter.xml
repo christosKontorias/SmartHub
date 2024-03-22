@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -28,7 +27,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -43,7 +42,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Kilometre"
+                android:text="@string/kilometre"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -65,7 +64,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -80,7 +79,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Meter"
+                android:text="@string/meter"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -102,7 +101,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -117,7 +116,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Centimeter"
+                android:text="@string/centimeter"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -139,7 +138,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -154,7 +153,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Millimetre"
+                android:text="@string/millimetre"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -176,7 +175,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -191,7 +190,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Micrometre"
+                android:text="@string/micrometre"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -213,7 +212,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -228,7 +227,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Nanometre"
+                android:text="@string/nanometre"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -250,7 +249,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -265,7 +264,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Mile"
+                android:text="@string/mile"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -287,7 +286,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -302,7 +301,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Yard"
+                android:text="@string/yard"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -324,7 +323,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -339,7 +338,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Foot"
+                android:text="@string/foot"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -361,7 +360,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="00"
+                android:text="@string/_0"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
 
@@ -376,7 +375,7 @@
                 android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:text="Inch"
+                android:text="@string/inch"
                 android:textSize="18sp"
                 android:paddingVertical="15dp"/>
         </LinearLayout>
@@ -399,22 +398,24 @@
 
             <EditText
                 android:id="@+id/inputNumber"
-                android:layout_width="250dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:background="@drawable/neutral_rectangle_background"
                 android:gravity="center"
                 android:padding="15dp"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:hint="Enter a Number!"
+                android:hint="@string/enter_a_number"
                 android:textColorHint="#A8CD9F"
                 android:inputType="numberDecimal"
                 android:layout_marginEnd="10dp"/>
         
             <Spinner
                 android:id="@+id/units"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
                 android:padding="15dp"
                 android:background="@drawable/neutral_rectangle_background"/>
         </LinearLayout>

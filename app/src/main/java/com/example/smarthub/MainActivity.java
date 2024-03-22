@@ -1,22 +1,13 @@
 package com.example.smarthub;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewTreeObserver;
-import android.view.inputmethod.EditorInfo;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout linearLayoutNotes = findViewById(R.id.linearLayoutNotes);
         LinearLayout linearLayoutFXConverter = findViewById(R.id.linearLayoutFXConverter);
         LinearLayout linearLayoutUnitsConverter = findViewById(R.id.linearLayoutUnitsConverter);
-        ImageView likeImageView = findViewById(R.id.imageNewsPost);
+        TextView textViewGitHub = findViewById(R.id.textViewGitHub);
+        ImageView likeImageView = findViewById(R.id.imageLikePost);
 
 
         // Google Search Image Navigation
@@ -143,6 +135,16 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Open new activity
                 startActivity(new Intent(MainActivity.this, UnitsConverterActivity.class));
+            }
+        });
+
+        //Opens The GitHub Project
+        textViewGitHub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String url = "https://github.com/christosKontorias/SmartHub";
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(intent);
             }
         });
 

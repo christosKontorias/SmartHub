@@ -72,5 +72,6 @@
     <string name="enter_a_number">Enter a Number!</string>
     <string name="search">Search</string>
     <string name="google_search">Google Search…</string>
+    <string name="github_project">GitHub Project</string>
 
 </resources>

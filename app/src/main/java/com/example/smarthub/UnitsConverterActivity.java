@@ -22,7 +22,7 @@ public class UnitsConverterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_units_converter);
 
-        EditText inputNumber = findViewById(R.id.inputNumber);
+        inputNumber = findViewById(R.id.inputNumber);
         units = findViewById(R.id.units);
         km = findViewById(R.id.km);
         m = findViewById(R.id.m);
@@ -36,6 +36,7 @@ public class UnitsConverterActivity extends AppCompatActivity {
         inch = findViewById(R.id.inch);
 
         String[] arr = {"km", "m", "cm", "mm", "microm", "nm", "mile", "yard", "foot", "inch"};
+
         units.setAdapter(new ArrayAdapter(UnitsConverterActivity.this, android.R.layout.simple_list_item_1, arr));
 
         units.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -43,11 +44,8 @@ public class UnitsConverterActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 update();
             }
-
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
+            public void onNothingSelected(AdapterView<?> parent) {}
         });
 
         inputNumber.addTextChangedListener(new TextWatcher() {
@@ -87,7 +85,7 @@ public class UnitsConverterActivity extends AppCompatActivity {
                     inputInKm = inputValue / 1000000000;
                     break;
                 case "nm":
-                    inputInKm = inputValue / 1000000000000.0; // Corrected the conversion factor
+                    inputInKm = inputValue / 1000000000000.0;
                     break;
                 case "mile":
                     inputInKm = inputValue * 1.609;

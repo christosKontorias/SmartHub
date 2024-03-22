@@ -8,20 +8,21 @@
     tools:context=".CompassActivity"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/accentColo">
+    android:background="#A8CD9F">
 
     <ImageView
         android:id="@+id/imageViewCompass"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         app:srcCompat="@drawable/compass"
-        android:layout_margin="10dp"/>
+        android:layout_margin="10dp"
+        android:contentDescription="@string/compass" />
 
     <TextView
         android:id="@+id/textViewDegrees"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Degrees: "
+        android:text="@string/degrees"
         android:textColor="@color/black"
         android:textSize="25sp"/>
 

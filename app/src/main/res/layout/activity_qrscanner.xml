@@ -25,6 +25,8 @@
         android:layout_below="@+id/scanner_view"
         android:layout_centerHorizontal="true"
         android:layout_margin="20dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
         android:text="@string/start_scanning"
         android:textColor="@color/black"/>
 

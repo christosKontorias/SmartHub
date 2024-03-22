@@ -44,7 +44,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
     @Override
     public void onSensorChanged(SensorEvent event) {
         int degrees = Math.round(event.values[0]);
-        textViewDegrees.setText("Degree's: " + degrees);
+        textViewDegrees.setText("Degree's: " + degrees + "°");
         imageViewCompass.setRotation(-degrees);
     }
     @Override
